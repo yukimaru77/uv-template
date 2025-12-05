@@ -20,6 +20,9 @@ dev-dependencies = [
     "pre-commit>=4.0.0",
 ]
 
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
 # --- 以下、Ruffの設定 ---
 [tool.ruff]
 line-length = 120
