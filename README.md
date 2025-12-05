@@ -1,7 +1,5 @@
 # Python 3.11 + uv + Ruff テンプレート
 
-[English](https://www.google.com/search?q=%23english) | [日本語](https://www.google.com/search?q=%23japanese)
-
 Python 3.11 固定、高速パッケージマネージャー `uv`、静的解析ツール `Ruff`、そして自動コミットスクリプトを完備した、現代的なPythonプロジェクトのテンプレートです。
 
 ## ✨ 特徴
@@ -19,10 +17,11 @@ Python 3.11 固定、高速パッケージマネージャー `uv`、静的解析
 
 このリポジトリをテンプレートとして使用し、あなたの新しいプロジェクトを開始する手順です。
 
-### 1\. リポジトリの作成
+### 1\. リポジトリのclone
 
-GitHub上のこのページにある **[Use this template]** ボタン（緑色）をクリックし、**[Create a new repository]** を選択します。
-（または、手動でコードをダウンロードし、`.git` フォルダを削除して `git init` し直してください）
+```powershell
+git clone https://github.com/yukimaru77/uv-template.git
+```
 
 ### 2\. プロジェクト情報の書き換え
 

@@ -16,7 +16,7 @@ build-backend = "hatchling.build"
 # 開発にしか使わないもの
 [tool.uv]
 dev-dependencies = [
-    "ruff=0.9.1",
+    "ruff==0.9.1",
     "pre-commit>=4.0.0",
 ]
 
