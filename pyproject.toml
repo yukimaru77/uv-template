@@ -1,0 +1,34 @@
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "Python 3.11 fixed project template"
+readme = "README.md"
+# 3.11以上、3.12未満に固定
+requires-python = ">=3.11,<3.12"
+
+# ▼ 本番で使うもの
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# 開発にしか使わないもの
+[tool.uv]
+dev-dependencies = [
+    "ruff=0.9.1",
+    "pre-commit>=4.0.0",
+]
+
+# --- 以下、Ruffの設定 ---
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

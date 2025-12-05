@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          # ここも3.11に固定
+          python-version: "3.11"
+          
+      - name: Install Ruff
+        run: pip install ruff==0.9.1
+
+      - name: Run Lint
+        run: ruff check
+
+      - name: Run Format Check
+        run: ruff format --check --diff

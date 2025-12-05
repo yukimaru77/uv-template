@@ -1,0 +1,50 @@
+# Python 3.11 + uv + Ruff テンプレート
+
+[English](https://www.google.com/search?q=%23english) | [日本語](https://www.google.com/search?q=%23japanese)
+
+Python 3.11 固定、高速パッケージマネージャー `uv`、静的解析ツール `Ruff`、そして自動コミットスクリプトを完備した、現代的なPythonプロジェクトのテンプレートです。
+
+## ✨ 特徴
+
+  - 🐍 **Python 3.11 完全固定** (`.python-version` 完備)
+  - ⚡ **uv** による爆速環境構築
+  - 🧹 **Ruff** による自動Lint & Format (VS Code保存時 / コミット時)
+  - 🛡️ **pre-commit** によるコミット前の強制コード修正
+  - 🤖 **GitHub Actions** によるCI自動テスト
+  - 🚀 **gcom.ps1** スクリプトによる「自動修正付きコミット」
+
+-----
+
+## 🛠️ プロジェクトの始め方 (Getting Started)
+
+このリポジトリをテンプレートとして使用し、あなたの新しいプロジェクトを開始する手順です。
+
+### 1\. リポジトリの作成
+
+GitHub上のこのページにある **[Use this template]** ボタン（緑色）をクリックし、**[Create a new repository]** を選択します。
+（または、手動でコードをダウンロードし、`.git` フォルダを削除して `git init` し直してください）
+
+### 2\. プロジェクト情報の書き換え
+
+クローンした直後のプロジェクトは、まだテンプレートの設定のままです。
+`pyproject.toml` を開き、あなたのプロジェクトに合わせて以下の3箇所を書き換えてください。
+
+```toml
+# pyproject.toml
+
+[project]
+name = "your-project-name"       # ← ★ プロジェクト名に変更 (例: my-analysis-tool)
+version = "0.1.0"                # ← 必要ならバージョンを変更
+description = "プロジェクトの説明" # ← ★ プロジェクトの説明に変更
+```
+
+### 3. 環境構築と初期化 (Setup)
+
+以下のコマンドを実行してください。
+ライブラリのインストールから、Git履歴のリセット、初期コミットまで全自動で行います。
+
+```powershell
+.\init.ps1
+```
+
+※ 初期化が完了すると、init.ps1 は自動的に削除され、開発準備が整います。
